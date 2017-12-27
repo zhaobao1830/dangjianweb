@@ -12,37 +12,37 @@
       </div>
     </div>
     <div class="loginContent" v-show="loginChecked">
-      <div class="logusername">
-        <div class="logusernameImgDiv">
+      <div class="logusernameandpassword">
+        <div class="logusernameandpasswordDiv">
           <span class="logusernameImg"></span>
         </div>
-        <div class="loguserInputDiv">
+        <div class="logusernameandpasswordInput">
           <input class="loguserInput" v-model="logusername" placeholder="用户名"/>
         </div>
       </div>
-      <div class="logpassword">
-        <div class="logpasswordImgDiv">
+      <div class="logusernameandpassword">
+        <div class="logusernameandpasswordDiv">
           <span class="logpasswordImg"></span>
         </div>
-        <div class="logpasswordInputDiv">
-          <input class="logpasswordInput" v-model="logpassword" placeholder="密码"/>
+        <div class="logusernameandpasswordInput">
+          <input class="logpasswordInput" type="password" v-model="logpassword" placeholder="密码"/>
         </div>
       </div>
       <div class="loginSubmit">登录</div>
       <div class="forgetPassword">找回密码？</div>
     </div>
     <div class="registerContent" v-show="registerChecked">
-      <div class="regusername">
+      <div class="registerCon">
         <input class="regusernameInput" v-model="reusername" placeholder="用户名"/>
       </div>
-      <div class="regpassword">
-        <input class="regpasswordInput" v-model="regpassword" placeholder="密码"/>
+      <div class="registerCon">
+        <input class="regpasswordInput" type="password" v-model="regpassword" placeholder="密码"/>
       </div>
-      <div class="regconregpassword">
-        <input class="regconregpasswordInput" v-model="conregpassword" placeholder="确认密码"/>
+      <div class="registerCon">
+        <input class="regconregpasswordInput" type="password" v-model="conregpassword" placeholder="确认密码"/>
       </div>
-      <div class="regmailbox">
-        <input class="regmailboxInput" v-model="mailbox" placeholder="邮箱"/>
+      <div class="registerCon">
+        <input class="regmailboxInput" type="email" v-model="mailbox" placeholder="邮箱"/>
       </div>
       <div class="registerSubmit">注册</div>
     </div>
@@ -123,51 +123,28 @@
           border-bottom: 15px solid #fff
     .loginContent
       margin-top: 70px
-      .logusername
+      .logusernameandpassword
         margin-left: 95px
         margin-right: 95px
         height: 110px
         border-bottom: 1px solid #dddddd
         display: flex
         align-items: center
-        box-sizing: border-box
-        .logusernameImgDiv
+        .logusernameandpasswordDiv
           flex: 0 0 36px
           margin-right: 20px
-          .logusernameImg
-            background-image: url("./username.png")
+          span
             background-size: 36px 40px
             width: 36px
             height: 40px
             display: inline-block
-        .loguserInputDiv
-          width: 100%
-          .loguserInput
-            width: 100%
-            height: 40px
-            line-height: 40px
-            font-size: 3rem
-            outline: 0
-            border: 0
-            color: #777777
-      .logpassword
-        margin-left: 95px
-        margin-right: 95px
-        height: 110px
-        border-bottom: 1px solid #dddddd
-        display: flex
-        align-items: center
-        .logpasswordImgDiv
-          flex: 0 0 36px
-          margin-right: 20px
+          .logusernameImg
+            background-image: url("./username.png")
           .logpasswordImg
-            background: url("./password.png") 0 0 no-repeat
-            width: 36px
-            height: 40px
-            display: inline-block
-        .logpasswordInputDiv
+            background-image: url("./password.png")
+        .logusernameandpasswordInput
           width: 100%
-          .logpasswordInput
+          input
             width: 100%
             height: 40px
             line-height: 40px
@@ -191,10 +168,7 @@
         margin-bottom: 250px
     .registerContent
       margin-top: 70px
-      .regusername
-      .regpassword
-      .regconregpassword
-      .regmailbox
+      .registerCon
         margin-left: 95px
         margin-right: 95px
         height: 110px
