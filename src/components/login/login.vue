@@ -1,6 +1,8 @@
 <template>
   <div class="djwlogin">
-    <div class="djwloginTop"></div>
+    <div class="djwloginTop">
+      <p>中铁电商党工青</p>
+    </div>
     <div class="chechkLogRegis">
       <div :class="{activeSpan: loginChecked}" class="checkLogin" @click="chechkLogRegis('login')">
         <span>登录</span>
@@ -220,13 +222,19 @@
     height: 100%
     .djwloginTop
       width: 100%
-      height: 430px
+      ptor('height', 400)
       background-image: url("./loginBg.png")
       background-repeat: no-repeat
       background-position: center
       background-size: cover
+      overflow: hidden
+      p
+        ptor('font-size', 38)
+        color: #fff
+        text-align: center
+        margin-top: 40px
     .chechkLogRegis
-      height: 110px
+      ptor('height', 110)
       display: flex
       background-color: #eeeeee
       div
@@ -234,9 +242,8 @@
         text-align: center
         align-items: center
         span
-          height: 110px
-          line-height: 110px
-          font-size: 3rem
+          ptor('line-height', 110)
+          ptor('font-size', 30)
           display: block
       .activeSpan
         position: relative
@@ -246,7 +253,7 @@
           position: absolute
           font-size: 0
           line-height: 0
-          top: 95px
+          ptor('top', 95)
           text-align: center
           left: 0
           right: 0
@@ -257,22 +264,24 @@
           border-right: 12px solid transparent
           border-bottom: 15px solid #fff
     .loginContent
-      margin-top: 70px
+      ptor('margin-top', 70)
       .logusernameandpassword
-        margin-left: 95px
-        margin-right: 95px
-        height: 110px
+        ptor('margin-left', 95)
+        ptor('margin-right', 95)
         border-bottom: 1px solid #dddddd
         display: flex
         align-items: center
         position: relative
         .logusernameandpasswordDiv
-          flex: 0 0 36px
-          margin-right: 20px
+          ptor('padding-top', 40)
+          ptor('padding-bottom', 30)
+          flex-shrink: 0
+          ptor('flex-basis', 36)
+          ptor('margin-right', 20)
           span
-            background-size: 36px 40px
-            width: 36px
-            height: 40px
+            background-size: 100% 100%
+            ptor('width', 36)
+            ptor('height', 40)
             display: inline-block
           .logusernameImg
             background-image: url("./username.png")
@@ -280,86 +289,98 @@
             background-image: url("./password.png")
         .logusernameandpasswordInput
           width: 100%
+          flex-shrink: 1
           input
             width: 100%
-            height: 40px
-            line-height: 40px
-            font-size: 3rem
+            ptor('height', 38)
+            ptor('line-height', 38)
+            ptor('font-size', 30)
             outline: 0
             border: 0
             color: #777777
         .prompt
           position: absolute
-          top: 110px
-          height: 28px
-          line-height: 28px
+          z-index: 999
+          ptor('top', 110)
+          ptor('height', 28)
+          ptor('line-height', 28)
           img
-            width: 29px
-            height: 28px
+            ptor('width', 29)
+            ptor('height', 28)
             display: block
             float: left
           p
             color: #fd7b01
-            font-size: 2.2rem
+            ptor('font-size', 22)
             display: block
             float: left
-            margin: 0 0 0 10px
+            margin: 0
+            ptor('margin-left', 10)
       .loginSubmit
         text-align: center
-        line-height: 94px
-        margin: 100px 95px 40px
+        ptor('line-height', 94)
+        ptor('margin-top', 100)
+        ptor('margin-right', 94)
+        ptor('margin-bottom', 40)
+        ptor('margin-left', 50)
+        ptor('height', 94)
         border: 1px solid #dddddd
-        height: 94px
-        border-radius: 47.5px
-        font-size: 3.6rem
+        ptor('border-radius', 47.5)
+        ptor('font-size', 36)
         color: #777777
       .forgetPassword
         color: #bbbbbb
-        font-size: 2.6rem
+        ptor('font-size', 26)
         text-align: center
-        margin-bottom: 250px
+        ptor('margin-bottom', 250)
     .registerContent
-      margin-top: 70px
+      ptor('margin-top', 70)
       .registerCon
-        margin-left: 95px
-        margin-right: 95px
-        height: 110px
+        ptor('margin-left', 95)
+        ptor('margin-right', 95)
         border-bottom: 1px solid #dddddd
         display: flex
         align-items: center
         position: relative
         input
           width: 100%
-          height: 40px
-          line-height: 40px
-          font-size: 3rem
+          ptor('height', 40)
+          ptor('line-height', 40)
+          ptor('font-size', 30)
+          ptor('padding-top', 40)
+          ptor('padding-bottom', 30)
           outline: 0
           border: 0
           color: #777777
         .prompt
+          z-index: 999
           position: absolute
-          top: 110px
-          height: 28px
-          line-height: 28px
+          ptor('top', 110)
+          ptor('height', 28)
+          ptor('line-height', 28)
           img
-            width: 29px
-            height: 28px
+            ptor('width', 29)
+            ptor('height', 28)
             display: block
             float: left
           p
             color: #fd7b01
-            font-size: 2.2rem
+            ptor('font-size', 22)
             display: block
             float: left
-            margin: 0 0 0 10px
+            margin: 0
+            ptor('margin-left', 10)
       .registerSubmit
         text-align: center
-        line-height: 94px
-        margin: 100px 95px 40px
+        ptor('height', 94)
+        ptor('line-height', 94)
+        ptor('margin-top', 100)
+        ptor('margin-left', 95)
+        ptor('margin-right', 95)
+        ptor('margin-bottom', 40)
         border: 1px solid #dddddd
-        height: 94px
-        border-radius: 47.5px
-        font-size: 3.6rem
+        ptor('border-radius', 47.5)
+        ptor('font-size', 36)
         color: #777777
     .confirm-enter-active,.confirm-leave-active
       transition: opacity  .3s

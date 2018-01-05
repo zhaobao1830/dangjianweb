@@ -47,23 +47,22 @@
     bottom: 0
     background-color: rgba(34, 34, 34, 0.8)
     .confirmContent
-      width: 400px
-      height: 200px
+      ptor('width', 400)
+      ptor('height', 200)
       position: absolute
       top: 50%
       left: 50%
-      margin-top: -100px
-      margin-left: -200px
+      transform: translate(-50%, -50%)
       background-color: #fff
       display: flex
       text-align: center
       align-items: center
       img
-        width: 44px
-        height: 44px
-        margin-left: 65px
+        ptor('width', 44)
+        ptor('height', 44)
+        ptor('margin-left', 65)
       p
-        font-size: 3rem
+        ptor('font-size', 30)
+        ptor('margin-left', 20)
         color: #222
-        margin-left: 20px
 </style>

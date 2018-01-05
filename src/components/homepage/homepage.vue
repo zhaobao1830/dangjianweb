@@ -1,15 +1,21 @@
 <template>
   <div class="homepage">
     <mheader></mheader>
+    <tab></tab>
+
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   import Mheader from 'components/m-header/mheader'
+  import Tab from 'components/tab/tab'
+  import Scroll from 'base/scroll/scroll'
 
   export default {
     components: {
-      Mheader
+      Mheader,
+      Tab,
+      Scroll
     }
   }
 </script>

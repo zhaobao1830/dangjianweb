@@ -48,70 +48,89 @@
 
   .mheader
     width: 100%
-    height: 130px
+    ptor('height', 100)
     background-color: #bf0000
     overflow: hidden
     .mheaderCon
-      height: 55px
-      line-height: 55px
-      margin: 56px 30px 0 20px
+      ptor('height', 100)
+      ptor('margin-right', 40)
+      ptor('margin-left', 30)
       position: relative
       display: flex
+      text-align: center
       align-items: center
-      justify-content: space-between
       .username
-        width: 36px
-        height: 36px
-        flex: 0 0 36px
+        display: inline-block
+        ptor('width', 36)
+        ptor('height', 36)
+        ptor('margin-right', 40)
+        flex-shrink: 0
+        ptor('flex-basis', 36)
+        img
+          ptor('width', 36)
+          ptor('height', 36)
+          float: left
       .webname
-        width: 244px
-        height: 55px
+        ptor('height', 55)
+        ptor('line-height', 55)
         position: absolute
         left: 50%
-        margin-left: -122px
+        top: 50%
+        transform: translate(-50%, -50%)
         img
-          width: 70px
-          height: 55px
+          ptor('width', 70)
+          ptor('height', 55)
           display: inline-block
           float: left
         p
-         float: left
-         margin: 0 0 0 20px
-         font-size: 2.2rem
-         color: #fff
+          margin: 0
+          float: left
+          ptor('margin-left', 20)
+          ptor('font-size', 32)
+          color: #fff
       .search
          position: absolute
-         right: 30px
-         width: 36px
-         height: 36px
+         ptor('width', 36)
+         ptor('height', 36)
+         ptor('right', 30)
+         flex-shrink: 0
+         ptor('flex-basis', 36)
          i
           display: block
-          width: 36px
-          height: 36px
-          background: url("./search.png") 0 0 no-repeat
+          ptor('width', 36)
+          ptor('height', 36)
+          background-image: url("./search.png")
+          background-size: 100% 100%
       .searchVal
          flex: 1
-         height: 60px
-         margin-left: 50px
-         margin-right: 20px
+         ptor('height', 60)
+         ptor('margin-left', 50)
+         ptor('margin-right', 20)
          position: relative
          input
            width: 100%
-           height: 60px
+           ptor('height', 60)
            border: none
            border-radius: 29.5px
+           display: block
          i
            position: absolute
-           width: 36px
-           height: 36px
+           ptor('width', 36)
+           ptor('height', 36)
            display: block
-           background: url("./searchVal.png") 0 0 no-repeat
-           top: 12px
-           right: 20px
+           background-image: url("./searchVal.png")
+           background-size: 100% 100%
+           ptor('top', 12)
+           ptor('right', 20)
       .switch
-         /*position: absolute*/
-         /*right: 0*/
-         width: 8px
-         height: 40px
-         flex: 0 0 8px
+        position: absolute
+        right: 0
+        ptor('width', 8)
+        ptor('height', 40)
+        flex-shrink: 0
+        ptor('flex-basis', 8)
+        img
+          ptor('width', 8)
+          ptor('height', 40)
+          float: left
 </style>
