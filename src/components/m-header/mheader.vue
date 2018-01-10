@@ -15,11 +15,11 @@
         <input type="text"/>
         <i @click="search"></i>
       </div>
-      <div class="switch" @click="operation">
+      <div class="switch" @click="operationShow">
         <img src="./switch.png"/>
       </div>
     </div>
-    <operation v-show="operationShow"></operation>
+    <operation v-show="operationIsShow" @operationHide="operationHide"></operation>
   </div>
 </template>
 
@@ -32,7 +32,7 @@
       return {
         serachShow: false, // 搜索输入框是否显示
         searchVal: '', // 搜搜输入内容
-        operationShow: true // 操作列表页面
+        operationIsShow: false // 操作列表页面
       }
     },
     methods: {
@@ -42,8 +42,13 @@
       },
 //      搜索方法
       search () {},
-//      操作
-      operation () {
+//      显示操作页面
+      operationShow () {
+        this.operationIsShow = true
+      },
+      // 隐藏操作页面
+      operationHide () {
+        this.operationIsShow = false
       }
     },
     components: {

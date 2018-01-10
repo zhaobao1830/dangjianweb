@@ -1,6 +1,6 @@
 <template>
-  <div class="operation">
-    <div class="operationCon">
+  <div class="operation" @click.stop="operationHide">
+    <div class="operationCon" @click.stop>
       <ul class="operul">
         <li class="operli">
           <div class="img">
@@ -20,7 +20,13 @@
 </template>
 
 <script type="text/ecmascript-6">
-  export default {}
+  export default {
+    methods: {
+      operationHide () {
+        this.$emit('operationHide')
+      }
+    }
+  }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" type="text/stylus">
