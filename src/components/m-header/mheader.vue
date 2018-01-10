@@ -15,21 +15,24 @@
         <input type="text"/>
         <i @click="search"></i>
       </div>
-      <div class="switch">
+      <div class="switch" @click="operation">
         <img src="./switch.png"/>
       </div>
     </div>
+    <operation v-show="operationShow"></operation>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 //  import axios from 'axios'
+  import Operation from 'components/operation/operation'
 
   export default {
     data () {
       return {
         serachShow: false, // 搜索输入框是否显示
-        searchVal: '' // 搜搜输入内容
+        searchVal: '', // 搜搜输入内容
+        operationShow: true // 操作列表页面
       }
     },
     methods: {
@@ -38,7 +41,13 @@
         this.serachShow = true
       },
 //      搜索方法
-      search () {}
+      search () {},
+//      操作
+      operation () {
+      }
+    },
+    components: {
+      Operation
     }
   }
 </script>
