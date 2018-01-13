@@ -1,7 +1,10 @@
 <template>
   <div class="mheader">
     <div class="mheaderCon">
-      <div class="username">
+      <div class="goBack" v-show="!usernameShow" @click="goBack">
+        <img src="./goBack.png"/>
+      </div>
+      <div class="username" v-show="usernameShow">
         <img src="./username.png"/>
       </div>
       <div class="webname" v-show="!serachShow">
@@ -28,6 +31,12 @@
   import Operation from 'components/operation/operation'
 
   export default {
+    props: {
+      usernameShow: {
+        type: Boolean,
+        default: true
+      }
+    },
     data () {
       return {
         serachShow: false, // 搜索输入框是否显示
@@ -49,6 +58,9 @@
       // 隐藏操作页面
       operationHide () {
         this.operationIsShow = false
+      },
+      goBack () {
+        this.$router.back()
       }
     },
     components: {
@@ -73,6 +85,17 @@
       display: flex
       text-align: center
       align-items: center
+      .goBack
+        display: inline-block
+        ptor('width', 22)
+        ptor('height', 39)
+        ptor('margin-right', 40)
+        flex-shrink: 0
+        ptor('flex-basis', 22)
+        img
+          ptor('width', 22)
+          ptor('height', 39)
+          float: left
       .username
         display: inline-block
         ptor('width', 36)

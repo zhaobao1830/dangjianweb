@@ -6,7 +6,7 @@
       <img src="./slide.png"/>
       <!--<slider>-->
       <!--</slider>-->
-      <div class="slider-content-bottom"></div>
+      <div class="slider-content-division"></div>
     </div>
     <div class="homepage-content">
       <div class="homepage-content-table">
@@ -40,8 +40,7 @@
               <img src="./con1.png"/>
             </div>
             <div class="text">
-              <div class="name">鲁班一届一次民主管理大会
-                开幕唱国歌</div>
+              <div class="name">鲁班一届一次民主管理大会开幕唱国歌<span class="top">顶</span></div>
               <div class="desc">
                 <p class="publisher">陈一桥</p>
                 <p class="pubdata">2017-3-15  15:00:22</p>
@@ -101,7 +100,7 @@
       img
         width: 100%
         ptor('height', 310)
-      .slider-content-bottom
+      .slider-content-division
         ptor('height', 20)
         background-color: #dddddd
     .homepage-content
@@ -127,48 +126,59 @@
             border-bottom-color: #bf0000
             span
               color: #bf0000
-       .homepage-conList
-         .itemUl
-           .item
-             ptor('margin-top', 30)
-             ptor('padding-bottom', 30)
-             border-bottom: 1px solid #dddddd
-             display: flex
-             box-sizing: border-box
-             align-items: center
-             ptor('padding-left', 30)
-             ptor('padding-right', 30)
-             ptor('height', 150)
-             .icon
-               ptor('flex-basis', 230)
-               ptor('width', 230)
-               ptor('height', 150)
-               ptor('padding-right', 30)
-               img
-                 ptor('width', 230)
-                 ptor('height', 150)
-             .text
-               ptor('height', 150)
-               flex: 1
-               overflow: hidden
-               position: relative
-               /*justify-content: center*/
-               /*display: flex*/
-               /*flex-direction: column*/
-               .name
-                 width: 100%
-                 color: #000000
-                 ptor('font-size', 36)
-                 ptor('line-height', 40)
-               .desc
-                 position: absolute
-                 bottom: 0
-                 ptor('font-size', 26)
-                 color: #777777
-                 ptor('line-height', 36)
-                 .publisher
-                   ptor('margin-right', 20)
-                   display: inline-block
-                 .pubdata
-                   display: inline-block
+    .homepage-conList
+      .itemUl
+        .item
+          overflow: hidden
+          ptor('margin', 30)
+          ptor('padding-bottom', 30)
+          border-bottom: 1px solid #dddddd
+          display: flex
+          box-sizing: border-box
+          align-items: center
+          ptor('height', 180)
+          .icon
+            ptor('flex-basis', 230)
+            ptor('width', 230)
+            ptor('height', 150)
+            ptor('padding-right', 30)
+            img
+              ptor('width', 230)
+              ptor('height', 150)
+          .text
+            ptor('height', 150)
+            flex: 1
+            overflow: hidden
+            position: relative
+            .name
+              width: 100%
+              color: #000000
+              ptor('font-size', 36)
+              ptor('line-height', 40)
+              display: inline-block
+              .top
+                ptor('font-size', 24)
+                ptor('line-height', 36)
+                ptor('border-radius', 4)
+                ptor('width', 36)
+                ptor('height', 36)
+                ptor('margin-left', 5)
+                text-align: center
+                background-color: #ff0000
+                color: #fff
+                display: inline-block
+            .desc
+              position: absolute
+              right: 0
+              bottom: 0
+              ptor('font-size', 26)
+              color: #777777
+              ptor('line-height', 36)
+              .posting
+                display: inline-block
+              .publisher
+                ptor('margin-right', 20)
+                display: inline-block
+              .pubdata
+                display: inline-block
 </style>
