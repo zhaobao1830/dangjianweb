@@ -56,6 +56,14 @@
               <div class="date">2017-3-15 15:00:22</div>
             </div>
           </li>
+          <li class="item">
+            <div class="img"><img src="./headerPortrait.png"/></div>
+            <div class="con">
+              <div class="name">陈一桥</div>
+              <div class="content">回复的内容</div>
+              <div class="date">2017-3-15 15:00:22</div>
+            </div>
+          </li>
         </ul>
         <div class="level-reply-tip">
           没有更多内容
@@ -123,6 +131,7 @@
         ptor('padding-bottom', 120)
         border-bottom: 1px solid #bbbbbb
         .listItem
+          ptor('padding-bottom', 76)
           background-color: #fff
           .item
             ptor('padding-top', 40)
