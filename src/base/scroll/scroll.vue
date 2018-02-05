@@ -32,9 +32,21 @@
           return
         }
         this.scroll = new BScroll(this.$refs.wrapper, {
+          scrollX: true,
+          scrollY: false,
           probeType: this.probeType,
           click: this.click
         })
+        console.log(this.scroll)
+      }
+    },
+    watch: {
+      data () {
+        console.log('yyyyyyyyy')
+        setTimeout(() => {
+          console.log('ppppppp')
+          this.refresh()
+        }, 20)
       }
     }
   }

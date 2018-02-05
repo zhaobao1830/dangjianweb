@@ -132,34 +132,37 @@
         } else {
           this.logpasswordCheck = true
         }
-        if (this.logusernameCheck && this.logpasswordCheck) {
-          this.text = '我是'
-          this.confirmShow = true
-          let data = {
-            'username': this.logusername.trim(),
-            'password': this.logpassword.trim()
-          }
-          axios({
-            url: '',
-            method: 'POST',
-            data: data,
-            transformRequest: [function (data) {
-              // Do whatever you want to transform the data
-              let ret = ''
-              for (let it in data) {
-                ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
-              }
-              return ret
-            }],
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded'
-            }
+        if (this.logusernameCheck === false && this.logpasswordCheck === false) {
+          this.$router.push({
+            path: `/homepage`
           })
-            .then(function () {
-            })
-            .catch(function (err) {
-              console.log(err)
-            })
+//          this.text = '我是'
+//          this.confirmShow = true
+//          let data = {
+//            'username': this.logusername.trim(),
+//            'password': this.logpassword.trim()
+//          }
+//          axios({
+//            url: '',
+//            method: 'POST',
+//            data: data,
+//            transformRequest: [function (data) {
+//              // Do whatever you want to transform the data
+//              let ret = ''
+//              for (let it in data) {
+//                ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
+//              }
+//              return ret
+//            }],
+//            headers: {
+//              'Content-Type': 'application/x-www-form-urlencoded'
+//            }
+//          })
+//            .then(function () {
+//            })
+//            .catch(function (err) {
+//              console.log(err)
+//            })
         }
       },
 //      注册
