@@ -109,7 +109,7 @@
             ptor('font-size', 30)
             .left
               float: left
-              color: #3222222
+              color: #322222
             .right
               float: right
               color: #777777
