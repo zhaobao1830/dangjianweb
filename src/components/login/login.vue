@@ -41,6 +41,12 @@
       <div class="loginSubmit" @click="login">登录</div>
       <div class="forgetPassword">找回密码？</div>
     </div>
+    <div class="forgetPasswords" v-show="forgetPassword">
+      <div class="forgetPasswordCon">
+        <input type="email" class="forgetPasswordInput" v-model="forgetPasswordVal" placeholder="请输入邮箱"/>
+        <a class="forgetPasswordSubmit" href="javascript:;">提交</a>
+      </div>
+    </div>
     <div class="registerContent" v-show="registerChecked">
       <div class="registerCon">
         <input class="regusernameInput" v-model="reusername" placeholder="用户名"/>
@@ -106,7 +112,9 @@
         mailboxCheckHave: false,
         mailboxCheckError: false,
         text: '', // 传给提示组件的内容
-        confirmShow: false
+        confirmShow: false,
+        forgetPassword: false,
+        forgetPasswordVal: ''
       }
     },
     methods: {
@@ -336,6 +344,45 @@
         ptor('font-size', 26)
         text-align: center
         ptor('margin-bottom', 250)
+    .forgetPasswords
+      position: fixed
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      background-color: rgba(78,78,78,0.8)
+      z-index: 100
+      .forgetPasswordCon
+        top: 180px
+        width: 80%
+        margin: 0 auto
+        background-color: #fff
+        overflow: hidden
+        text-align: center
+        position: relative
+        ptor('padding-bottom', 80)
+        .forgetPasswordInput
+          width: 90%
+          ptor('height', 40)
+          ptor('line-height', 40)
+          ptor('font-size', 30)
+          outline: none
+          border: none
+          padding-left: 5%
+          padding-tight: 5%
+        .forgetPasswordSubmit
+          display: block
+          ptor('font-size', 30)
+          ptor('width', 100)
+          ptor('height', 40)
+          ptor('line-height', 40)
+          text-decoration: none
+          border: 2px solid #398fd1
+          color: #398fd1
+          position: absolute
+          ptor('bottom', 20)
+          left: 50%
+          transform: translate(-50%, 0)
     .registerContent
       ptor('margin-top', 70)
       .registerCon
